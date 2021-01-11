@@ -5,11 +5,14 @@
 """
 
 # Imports
+import os
+
 import snscrape.modules.twitter as sntwitter
 import pandas as pd
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
+    write_path = os.path.join('data', 'twitter_datasets', 'raw_data', 'covid_tweets_raw.csv')
     # Creating list to append tweet data to
     tweets_list = []
 
@@ -24,4 +27,4 @@ if __name__ == '__main__':
     tweets_df2.head()
 
     # Export dataframe into a CSV
-    tweets_df2.to_csv('covid-tweets.csv', sep=',', index=False)
+    tweets_df2.to_csv(write_path, sep=',', index=False)
