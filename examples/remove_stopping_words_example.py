@@ -22,9 +22,7 @@ if __name__ == '__main__':
         'Tweets': [],
         'Non_stop_Tokanize_tweets': []
     })
-    # print(tweets['Datetime'][0])
     print(data_df['Datetime'])
-    # exit(0)
     for index, _tweets in enumerate(tweets['Tokanize_tweets']):
         clean_tweets = []
         for _index, token in enumerate(_tweets.split(',')):

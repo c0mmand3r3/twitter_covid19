@@ -6,18 +6,7 @@
 
 import os
 import pandas as pd
-import re
-import string
-
-
-def filter_text(sentence):
-    string.punctuation
-    '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
-    sentence.strip(string.punctuation)
-    cleaned_fullstop = re.sub(r'[।ः|०-९]', '', str(sentence))
-    # clean_text = re.sub(r'[^\w\s]', '', str(cleaned_fullstop))
-    return ' '.join(re.findall(r'[\u0900-\u097F]+', str(cleaned_fullstop), re.IGNORECASE))
-
+from tweeter_covid19.utils import filter_text
 
 if __name__ == '__main__':
     read_path = os.path.join('data', 'twitter_datasets', 'raw_data', 'covid_tweets_raw.csv')

@@ -1,19 +1,13 @@
-**Scrapping technique**
-
-Scrap from Twitter <br/>
-Time limit of the scrapping link scroll down should be given.
-<br/>
-`for example, sub_scrap.get_page(pause_time=10, activate_scroll_down=True)`
-<br/>
-Pause time can be changed with respect to seconds.
-
-
 **Scrapping Date**
 <br/>
 <br/>
 From : 2020-2-11 To : 2021-1-10
 <br/>
 File path : - data/twitter_dataset/raw-covid-tweets.csv
+<br/>
+Python Run File Path : - examples/twitter_scrapping_example.py
+<br/>
+
 
 <h1>Step 1</h1>
 <h3>Cleaning of data</h3>
@@ -40,11 +34,18 @@ Tokenize tweets ( seperated by comma)
 <br/>
 Eg. <br/>
 0,2021-01-10 22:06:41+00:00,अमेरिकामा कोभिड बाट एकै दिन चार हजारभन्दा बढीको मृत्यु, ' अमेरिकामा,कोभिड,बाट,एकै,दिन,चार,हजारभन्दा,बढीको,मृत्यु'
+<h6>CSV file Information </h6>
 
 `First File Path: - data/preprocessing/cleaning_data/covid_tweets_clean.csv`
 <br/>
 `Second File Path: - data/preprocessing/cleaning_data/covid_tweets_tokenize.csv`
 
+<h6>Python file Information </h6>
+`First Python File: - examples/raw_tweets_filter_example.py`
+<br/>
+`Second Python File: - examples/remove_duplicate_tweets_example.py`
+<br/>
+`Third Python File: - examples/remove_stopping_words_example.py`
 
 
 
