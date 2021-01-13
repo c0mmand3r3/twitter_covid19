@@ -7,9 +7,15 @@
 import os
 import pandas as pd
 import re
+import string
+
 
 def filter_text(sentence):
-    cleaned_fullstop = re.sub(r'[।|०-९]', '', str(sentence))
+    string.punctuation
+    '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+    sentence.strip(string.punctuation)
+    cleaned_fullstop = re.sub(r'[।ः|०-९]', '', str(sentence))
+    # clean_text = re.sub(r'[^\w\s]', '', str(cleaned_fullstop))
     return ' '.join(re.findall(r'[\u0900-\u097F]+', str(cleaned_fullstop), re.IGNORECASE))
 
 
@@ -19,8 +25,8 @@ if __name__ == '__main__':
 
     df = pd.read_csv(read_path)
     clean_tweets = dict({
-        'Datetime' : [],
-        'Clean_text' : [],
+        'Datetime': [],
+        'Clean_text': [],
     })
     for index, content in enumerate(df['Text']):
         print(df['Datetime'][index], content)
