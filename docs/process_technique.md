@@ -51,3 +51,11 @@ Eg. <br/>
 
 <h1>Step 2</h1>
 <h3>Stemmer data</h3>
+
+The Stemmer is written in Java. Thus, csv file is used as a data source for stemmer.
+<br/>
+<br/>
+`Data source: - data/preprocessing/cleaning_data/covid_tweets_tokenize.csv`
+<br/>
+`Generate Data Path: - data/preprocessing/stemmer_data/covid_tweets_Stemmer_tokenize.csv`
+<br/>
