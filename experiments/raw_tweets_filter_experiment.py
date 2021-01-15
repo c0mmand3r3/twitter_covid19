@@ -15,7 +15,6 @@ def filter_text(sentence):
     '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
     sentence.strip(string.punctuation)
     cleaned_fullstop = re.sub(r'[।ः|०-९]', '', str(sentence))
-    # clean_text = re.sub(r'[^\w\s]', '', str(cleaned_fullstop))
     return ' '.join(re.findall(r'[\u0900-\u097F]+', str(cleaned_fullstop), re.IGNORECASE))
 
 
