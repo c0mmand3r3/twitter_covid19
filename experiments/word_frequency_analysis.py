@@ -18,7 +18,7 @@ if __name__ == '__main__':
     words_list = ' '.join(df['Stemmer_tokens']).replace(";", ",").replace(" ", ",").split(',')
     common_words = Counter(words_list).most_common(None)
 
-    common_words_count = pd.DataFrame(common_words,columns=['words', 'count'])
+    common_words_count = pd.DataFrame(common_words, columns=['words', 'count'])
     common_words_count.to_csv(write_path)
     print(f'Common words successfully extracted and saved to {write_path}')
 
