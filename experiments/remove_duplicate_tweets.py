@@ -30,21 +30,3 @@ if __name__ == '__main__':
     print("Tweets Separated and Duplicate tweets removed Successfully...")
 
 
-    # published_dates = []
-    # for index, content in enumerate(df['Clean_text']):
-    #     for [index, heading] in enumerate(df['Clean_text']):
-    #         if df['Clean_text'][index] == heading:
-    #             print(df['Clean_text'][index])
-    #             print(heading)
-    #             published_dates.append(df['Datetime'][index])
-    #             print(published_dates)
-    #             index += 1
-    #             # print(index)
-    #             exit(0)
-    #             # print(df['Datetime'][index])
-    #             # duplicate_text = published_dates.append((df['Datetime']))
-    #             # print(duplicate_text)
-    #         else:
-    #             exit(0)
-    #             # df.to_csv(write_path)
-
