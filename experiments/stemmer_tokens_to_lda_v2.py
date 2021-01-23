@@ -48,7 +48,6 @@ if __name__ == '__main__':
 
     # Print Top 10 topics with each topic having 10 topics.
     for index, item in topics_lda:
-        # print('Slice : {} - \nTop topic: {}.\n'.format(index + 1, item))
         print(f'Slice - {index+1} \n Top topic - {item}')
 
     print('Top 10 topics generated Successfully..')
