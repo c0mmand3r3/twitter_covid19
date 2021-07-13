@@ -59,3 +59,18 @@ The Stemmer is written in Java. Thus, csv file is used as a data source for stem
 <br/>
 `Generate Data Path: - data/preprocessing/stemmer_data/covid_tweets_Stemmer_tokenize.csv`
 <br/>
+
+
+<h1>Step 3</h1>
+<h3>Data Preparation Annotation Manually</h3>
+
+The annotation is prepred by four different author.
+<hr/>
+Prepared By: <hr/>
+1-18000 : Ashish Mainali
+18000-26000 : Anish Basnet
+26000-end : Tej Bahadur Shahi
+Review : Chiranjibi Sitaula
+
+<h1>Step 4</h1>
+<h3> Covid Dataset collection</h3>
