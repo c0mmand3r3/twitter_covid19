@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
         # positive split
         pos_train_data = positive_label_data.sample(frac=0.7)
-        post_test_data = positive_label_data.drop(pos_train_data.index)
+        pos_test_data = positive_label_data.drop(pos_train_data.index)
 
         # negative split
         neg_train_data = negative_label_data.sample(frac=0.7)
@@ -38,7 +38,7 @@ if __name__ == '__main__':
         neu_test_data = neutral_label_data.drop(neu_train_data.index)
 
         train_data = [pos_train_data, neg_train_data, neu_train_data]
-        test_data = [post_test_data, neg_test_data, neu_test_data]
+        test_data = [pos_test_data, neg_test_data, neu_test_data]
 
         train_df = pd.concat(train_data)
         test_df = pd.concat(test_data)
@@ -46,5 +46,8 @@ if __name__ == '__main__':
         train_df.to_csv(os.path.join(joiner_path, 'train.csv'))
         test_df.to_csv(os.path.join(joiner_path, 'test.csv'))
 
-        print('FOLD - {} // Successfully Created ! Train tweets - {} :: Test tweets - {} .'.
-              format(fold + 1, train_df.shape[0], test_df.shape[0]))
+        print('FOLD - {} // Successfully Created ! Train tweets - {} :: Test tweets - {}  -- Pos -'
+              ' {}/{} Neg - {}/{} Neu - {}/{}.'.format(fold + 1, train_df.shape[0], test_df.shape[0],
+                                                       pos_train_data.shape[0], pos_test_data.shape[0],
+                                                       neg_train_data.shape[0], neg_test_data.shape[0],
+                                                       neu_train_data.shape[0], neu_test_data.shape[0]))

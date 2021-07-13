@@ -96,17 +96,18 @@ Final Dataset Name : covid19_tweeter_final_dataset.csv <br>
 <h1>Step 5</h1>
 <h3>Dataset Split</h3>
 
+Based on the category,
 Data split into 10 folds the ratio of 0.70 (70% train, 30% test).
 <br>
 Python file : data_split_example.py <br>
 Folds Information - <br>
-FOLD - 1 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
-FOLD - 2 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
-FOLD - 3 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
-FOLD - 4 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
-FOLD - 5 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
-FOLD - 6 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
-FOLD - 7 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
-FOLD - 8 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
-FOLD - 9 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
-FOLD - 10 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
+FOLD - 1 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
+FOLD - 2 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
+FOLD - 3 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
+FOLD - 4 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
+FOLD - 5 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
+FOLD - 6 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
+FOLD - 7 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
+FOLD - 8 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
+FOLD - 9 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
+FOLD - 10 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
