@@ -65,12 +65,12 @@ The Stemmer is written in Java. Thus, csv file is used as a data source for stem
 <h3>Data Preparation Annotation Manually</h3>
 
 The annotation is prepred by four different author.
-<hr/>
-Prepared By: <hr/>
-1-18000 : Ashish Mainali
-18000-26000 : Anish Basnet
-26000-end : Tej Bahadur Shahi
-Review : Chiranjibi Sitaula
+<br>
+Prepared By: <br>
+1-18000 : Ashish Mainali <br>
+18000-26000 : Anish Basnet <br>
+26000-end : Tej Bahadur Shahi <br>
+Review : Chiranjibi Sitaula <br>
 
 <h1>Step 4</h1>
 <h3> Covid Dataset collection</h3>
@@ -81,13 +81,31 @@ First file to run :
 Second file  to run:
  - covid19_query_dataset_example.py
 
-<hr/>
+<br/>
 First file helps to collect the data from two different csv file.
 
-<hr/>
+<br>
 Second file help to filtered out unnecessary labeling error.
-<hr/>
-Total Tweets : 33,473 <hr/>
-Labeling Error Tweets : 38 <hr/>
-Final Total Tweets : 33,435 <hr/>
-Final Dataset Name : covid19_tweeter_final_dataset.csv <hr/>
+<br>
+Total Tweets : 33,473 <br>
+Labeling Error Tweets : 38 <br>
+Final Total Tweets : 33,435 <br>
+Final Dataset Name : covid19_tweeter_final_dataset.csv <br>
+
+
+<h1>Step 5</h1>
+<h3>Dataset Split</h3>
+
+Data split into 10 folds the ratio of 0.70 (70% train, 30% test).
+
+Folds Information - <br>
+FOLD - 1 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
+FOLD - 2 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
+FOLD - 3 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
+FOLD - 4 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
+FOLD - 5 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
+FOLD - 6 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
+FOLD - 7 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
+FOLD - 8 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
+FOLD - 9 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
+FOLD - 10 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
