@@ -1,12 +1,10 @@
 """
  - Author : Anish Basnet
  - Date : Tuesay, July 13, 2021
- This is to collect the different csv file.
+ This is to create single covid19 dataset from different annotation csv file.
 """
-import math
 import os
 
-import numpy as np
 import pandas as pd
 
 from tweeter_covid19.utils import flatten
@@ -59,6 +57,7 @@ if __name__ == '__main__':
     new_dataset['Tokanize_tweet'] = flatten(new_dataset['Tokanize_tweet'])
 
     write_df = pd.DataFrame(new_dataset)
+    # write_df = write_df.query('Label == "0" or Label == "1" or Label == "-1"')
 
     write_df.to_csv(write_path)
     print("Succefully collected Data")
