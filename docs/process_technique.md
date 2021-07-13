@@ -97,7 +97,8 @@ Final Dataset Name : covid19_tweeter_final_dataset.csv <br>
 <h3>Dataset Split</h3>
 
 Data split into 10 folds the ratio of 0.70 (70% train, 30% test).
-
+<br>
+Python file : data_split_example.py <br>
 Folds Information - <br>
 FOLD - 1 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
 FOLD - 2 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031 .<br>
