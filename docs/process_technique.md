@@ -74,3 +74,20 @@ Review : Chiranjibi Sitaula
 
 <h1>Step 4</h1>
 <h3> Covid Dataset collection</h3>
+
+First file to run : 
+ - data_collection_example.py
+
+Second file  to run:
+ - covid19_query_dataset_example.py
+
+<hr/>
+First file helps to collect the data from two different csv file.
+
+<hr/>
+Second file help to filtered out unnecessary labeling error.
+<hr/>
+Total Tweets : 33,473 <hr/>
+Labeling Error Tweets : 38 <hr/>
+Final Total Tweets : 33,435 <hr/>
+Final Dataset Name : covid19_tweeter_final_dataset.csv <hr/>
