@@ -48,7 +48,7 @@ def preprocess_documents(documents):
     return filter_list
 
 
-def create_vocab(texts):
+def create_vocab(texts, tokn):
     """
     This method is used to create the vocabulary fdef preprocess_nepali_documents(documents, stop_words):
     words = []
@@ -63,7 +63,7 @@ def create_vocab(texts):
     :return: List->['word',.....,'word']
     """
 
-    count_vector = CountVectorizer(stop_words='english')
+    count_vector = CountVectorizer(token_pattern=tokn)
     count = count_vector.fit_transform(texts)
     frequency = zip(count_vector.get_feature_names(), count.sum(axis=0).tolist()[0])
     word_with_freq = sorted(frequency, key=lambda x: -x[1])

@@ -111,3 +111,11 @@ FOLD - 7 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  
 FOLD - 8 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
 FOLD - 9 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
 FOLD - 10 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
+
+<h1>Step 6</h1>
+<h3>Generating token with frequency</h3>
+
+python file : get_tokens_frequency_example.py
+Used to generate the frequency of the tokens in training files
+
+<h1>Step 7</h1>
