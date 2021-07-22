@@ -43,11 +43,11 @@ if __name__ == '__main__':
         }
 
         write_joiner_path = os.path.join(write_path, 'set_' + str(n_set + 1))
-        read_joiner_path = os.path.join(data_path, "set_" + str(n_set + 1), "train.csv")
+        read_joiner_path = os.path.join(data_path, "set_" + str(n_set + 1), "test.csv")
         word_with_freq = read_pickle_data(os.path.join(word_with_freq_fold,
                                                        'set_' + str(n_set + 1), 'train_wwf.pkl'))
         mkdir(write_joiner_path)
-        vector_writer_joiner_path = os.path.join(write_joiner_path, 'train')
+        vector_writer_joiner_path = os.path.join(write_joiner_path, 'test')
         mkdir(vector_writer_joiner_path)
         data = pd.read_csv(read_joiner_path)
 
@@ -71,6 +71,5 @@ if __name__ == '__main__':
             if index % 1000 == 0:
                 print('{}/{} -- Successfully Created! ---- Set : {}'.format(index, len(data['Tweet']), n_set+1))
         df = pd.DataFrame(data_dict)
-        df.to_csv(write_joiner_path, 'train.csv')
+        df.to_csv(os.path.join(write_joiner_path, 'test.csv'))
         print("{} - Set CSV file Successfully created")
-

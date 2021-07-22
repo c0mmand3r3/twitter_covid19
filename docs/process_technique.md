@@ -113,9 +113,21 @@ FOLD - 9 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  
 FOLD - 10 // Successfully Created ! Train tweets - 23404 :: Test tweets - 10031  -- Pos - 10487/4495 Neg - 9515/4078 Neu - 3402/1458. <br>
 
 <h1>Step 6</h1>
-<h3>Generating token with frequency</h3>
+<h3>Generating token with frequency (Optional)</h3>
 
-python file : get_tokens_frequency_example.py
+(Not required for non token selector based on ranking) <br> <br/>
+python file : get_tokens_frequency_example.py <br>
 Used to generate the frequency of the tokens in training files
 
 <h1>Step 7</h1>
+<h3>Token Embedding Generator for Transfer learning</h3>
+
+This step is to transfer the vector of nepali linguistic 
+and generate the vector of each tweet.
+<br> <br>
+Python File : tokens_embedding_distance_based_vectors_example.py <br>
+
+<h1>Step 8</h1>
+<h3>Train test collector for reducing compile time</h3>
+
+python file : train_test_collector_example.py
