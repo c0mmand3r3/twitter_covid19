@@ -12,10 +12,11 @@ from tweeter_covid19.utils import mkdir
 TOTAL_SET = 10
 
 if __name__ == '__main__':
-    read_path = os.path.join('data', 'original', 'covid19_tweeter_final_dataset_clean_data.csv')
+    read_path = os.path.join('data', 'original', 'covid19_tweets_refactor.csv')
     write_path = os.path.join('data', 'fold_dataset')
 
     data = pd.read_csv(read_path)
+
 
     positive_label_data = data.query('Label == 1')
     negative_label_data = data.query('Label == -1')
