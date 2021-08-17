@@ -7,7 +7,7 @@ import os
 
 import numpy as np
 
-from tweeter_covid19.utils import get_all_files
+from tweeter_covid19.utils.utils import get_all_files
 
 
 def split_document_based_data_set(split_documents=None, ratio=None, verbose=False):

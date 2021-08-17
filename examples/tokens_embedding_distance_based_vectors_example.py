@@ -12,7 +12,7 @@ from tweeter_covid19.utils.pickleutils import read_pickle_data, write_pickle_dat
 
 SETS = 10
 
-TOKENS_N_NUMBERS = 10
+TOKENS_N_NUMBERS = 12
 VECTOR_LEN = 17
 
 if __name__ == '__main__':
@@ -39,15 +39,15 @@ if __name__ == '__main__':
             'Label': [],
             'Datetime': [],
             'Tweet': [],
-            'Tokanize_tweet': [],
+            'Tokenize_tweet': [],
         }
 
         write_joiner_path = os.path.join(write_path, 'set_' + str(n_set + 1))
-        read_joiner_path = os.path.join(data_path, "set_" + str(n_set + 1), "test.csv")
+        read_joiner_path = os.path.join(data_path, "set_" + str(n_set + 1), "train.csv")
         word_with_freq = read_pickle_data(os.path.join(word_with_freq_fold,
                                                        'set_' + str(n_set + 1), 'train_wwf.pkl'))
         mkdir(write_joiner_path)
-        vector_writer_joiner_path = os.path.join(write_joiner_path, 'test')
+        vector_writer_joiner_path = os.path.join(write_joiner_path, 'train')
         mkdir(vector_writer_joiner_path)
         data = pd.read_csv(read_joiner_path)
 
@@ -66,10 +66,10 @@ if __name__ == '__main__':
             data_dict['Label'].append(data['Label'][index])
             data_dict['Datetime'].append(data['Datetime'][index])
             data_dict['Tweet'].append(data['Tweet'][index])
-            data_dict['Tokanize_tweet'].append(data['Tokanize_tweet'][index])
+            data_dict['Tokenize_tweet'].append(data['Tokenize_tweet'][index])
             write_pickle_data(os.path.join(vector_writer_joiner_path, str(index)+'.pkl'), tweet_vectors)
             if index % 1000 == 0:
                 print('{}/{} -- Successfully Created! ---- Set : {}'.format(index, len(data['Tweet']), n_set+1))
         df = pd.DataFrame(data_dict)
-        df.to_csv(os.path.join(write_joiner_path, 'test.csv'))
+        df.to_csv(os.path.join(write_joiner_path, 'train.csv'))
         print("{} - Set CSV file Successfully created")
