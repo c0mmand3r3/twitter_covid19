@@ -50,6 +50,29 @@ class Classification:
 
         return self.svm_model.score(test_x, test_y)
 
+    def fit_predict(self, train_x=None, train_y=None, test_x=None, test_y=None, normalize=False):
+        """
+        :param normalize:
+        :param train_x:
+        :param train_y:
+        :param test_x:
+        :param test_y:
+        :return:
+        """
+        if train_x is None or train_y is None or test_x is None or test_y is None:
+            return None
+        train_x = np.asarray(train_x)
+        test_x = np.asarray(test_x)
+        if normalize is True:
+            scaler = StandardScaler()
+            scaler.fit(train_x)
+            train_x = scaler.transform(train_x)
+            test_x = scaler.transform(test_x)
+
+        self.svm_model.fit(train_x, train_y)
+
+        return self.svm_model.predict(test_x)
+
     def get_confusion_matrix(self, train_x=None, train_y=None, test_x=None, test_y=None, normalize=False):
         if train_x is None or train_y is None or test_x is None or test_y is None:
             return None

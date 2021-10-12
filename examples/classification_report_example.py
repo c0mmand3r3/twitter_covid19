@@ -33,7 +33,7 @@ if __name__ == '__main__':
     }
     for n_set in range(SETS):
         read_joiner_path = os.path.join(read_main_path, 'set_' + str(n_set + 1))
-        model = load_model(os.path.join(read_path, 'set_' + str(n_set + 1), str(n_set + 1) + '_300dim_rmsprop.h5'))
+        # model = load_model(os.path.join(read_path, 'set_' + str(n_set + 1), str(n_set + 1) + '_300dim_rmsprop.h5'))
 
         train_x = read_pickle_data(os.path.join(read_joiner_path, 'train_x.pkl'))
         train_y = read_pickle_data(os.path.join(read_joiner_path, 'train_y.pkl'))
@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
         print(np.shape(train_x), np.shape(train_y))
         print(np.shape(test_x), np.shape(test_y))
-
+        exit(0)
         scale_model = StandardScaler()
         scale_model.fit(train_x)
 
