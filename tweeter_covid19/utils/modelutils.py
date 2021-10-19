@@ -23,8 +23,9 @@ def optimize_model(model=None, data=(), limit=(1, 100, 1), gamma=None, normalize
     accuracy = []
     for c in range(limit[0], limit[1], limit[2]):
         model.fit_parameter(c=c, kernel='rbf', gamma=1e-04)
+        model.fit(data[0], data[1])
         acc = model.classify(data[0], data[1], data[2], data[3], normalize=normalize)
         if verbose is True:
             print("for c = {}, Accuracy : {} . ".format(c, acc))
         accuracy.append((c, acc))
-    return accuracy
+    return accuracy, model

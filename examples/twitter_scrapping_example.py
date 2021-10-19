@@ -13,6 +13,7 @@ import pandas as pd
 
 if __name__ == '__main__':
     write_path = os.path.join('data', 'twitter_datasets', 'raw_data', 'covid_tweets_raw.csv')
+
     # Creating list to append tweet data to
     tweets_list = []
 

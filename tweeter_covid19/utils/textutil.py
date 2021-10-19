@@ -4,6 +4,7 @@
  -- date : 11/14/2019
 """
 import re
+import string
 from string import punctuation
 
 from nltk import word_tokenize, PorterStemmer, WordNetLemmatizer
@@ -47,7 +48,7 @@ def preprocess_documents(documents):
     return filter_list
 
 
-def create_vocab(texts):
+def create_vocab(texts, tokn):
     """
     This method is used to create the vocabulary fdef preprocess_nepali_documents(documents, stop_words):
     words = []
@@ -62,7 +63,7 @@ def create_vocab(texts):
     :return: List->['word',.....,'word']
     """
 
-    count_vector = CountVectorizer(stop_words='english')
+    count_vector = CountVectorizer(token_pattern=tokn)
     count = count_vector.fit_transform(texts)
     frequency = zip(count_vector.get_feature_names(), count.sum(axis=0).tolist()[0])
     word_with_freq = sorted(frequency, key=lambda x: -x[1])
@@ -170,3 +171,13 @@ def process_rasuwa_dirga(tokens=None, pairs=None, verbose=False):
                         print("Match word : {} - {} . Total Tokens : {} . ".format(token[0], _token[0],
                                                                                    len(tokens)))
     return tokens
+
+
+# TODO not completely refactored yet.
+def filter_text(sentence):
+    string.punctuation
+    '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~'
+    sentence.strip(string.punctuation)
+    cleaned_fullstop = re.sub(r'[।ः|०-९]', '', str(sentence))
+    # clean_text = re.sub(r'[^\w\s]', '', str(cleaned_fullstop))
+    return ' '.join(re.findall(r'[\u0900-\u097F]+', str(cleaned_fullstop), re.IGNORECASE))

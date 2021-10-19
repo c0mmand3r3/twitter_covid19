@@ -8,8 +8,8 @@ import os
 import pandas as pd
 
 if __name__ == '__main__':
-    read_path = os.path.join('data', 'twitter_datasets', 'raw_data', 'covid_tweets_clean.csv')
-    write_path = os.path.join('data', 'twitter_datasets', 'raw_data', 'covid_tweets_no_duplicate.csv')
+    read_path = os.path.join('data', 'preprocessing', 'cleaning_data', 'covid_tweets_clean.csv')
+    write_path = os.path.join('data', 'preprocessing', 'cleaning_data', 'covid_tweets_no_duplicate.csv')
 
     df = pd.read_csv(read_path)
 

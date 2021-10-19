@@ -11,8 +11,8 @@ from tweeter_covid19.utils import read_file
 
 if __name__ == '__main__':
     stopping_words_path = os.path.join('resources', 'additional_stop_words.txt')
-    read_path = os.path.join('data', 'twitter_datasets', 'raw_data', 'covid_tweets_no_duplicate.csv')
-    write_path = os.path.join('data', 'twitter_datasets', 'raw_data', 'covid_tweets_no_stopping_words.csv')
+    read_path = os.path.join('data', 'original', 'covid19_tweeter_final_dataset.csv')
+    write_path = os.path.join('data', 'original', 'covid_tweets_no_stopping_words.csv')
 
     dataset = read_file(stopping_words_path)
     tweets = pd.read_csv(read_path)
@@ -22,9 +22,7 @@ if __name__ == '__main__':
         'Tweets': [],
         'Non_stop_Tokanize_tweets': []
     })
-    # print(tweets['Datetime'][0])
     print(data_df['Datetime'])
-    # exit(0)
     for index, _tweets in enumerate(tweets['Tokanize_tweets']):
         clean_tweets = []
         for _index, token in enumerate(_tweets.split(',')):

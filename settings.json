@@ -1,3 +1,8 @@
 {
-  "chrome_driver_path" : "resources/chrome/chromedriver"
+  "chrome_driver_path" : "resources/chrome/chromedriver",
+  "stop_word_path" : "resources/dictionary/additional_stop_words.txt",
+    "stop_word_file" : "resources/dictionary/additional_stop_words.txt",
+  "raswa_dirga_pair_path" : "resources/dictionary/rasuwa_dirga_.txt",
+    "rasuwa_dirga_path" : "resources/dictionary/rasuwa_dirga_.txt"
+
 }

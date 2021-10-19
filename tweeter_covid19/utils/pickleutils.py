@@ -1,7 +1,7 @@
 import os
 import pickle
 
-from tweeter_covid19.utils import get_file_name
+from tweeter_covid19.utils.utils import get_file_name
 
 
 def data_split(path=None):
